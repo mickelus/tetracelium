@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "tetra:blocks/forged_pillar",
-        "side": "tetra:blocks/forged_pillar_side"
-    }
-}
-
