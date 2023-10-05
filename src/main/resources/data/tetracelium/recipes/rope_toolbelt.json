@@ -1,0 +1,31 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "farmersdelight"
+        }
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "# #",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "farmersdelight:rope"
+        }
+    },
+    "result": {
+        "item": "tetra:modular_toolbelt",
+        "nbt": {
+            "id": "48e8f469-6751-4654-9a4d-a0cfe26cf57f",
+            "toolbelt/slot1": "toolbelt/strap_slot1",
+            "toolbelt/strap_slot1_material": "strap1/rope",
+            "toolbelt/slot3": "toolbelt/strap_slot3",
+            "toolbelt/strap_slot3_material": "strap1/rope",
+            "toolbelt/belt": "toolbelt/belt",
+            "toolbelt/belt_material": "belt/rope"
+        }
+    }
+}

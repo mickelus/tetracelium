@@ -4,6 +4,7 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.gradle' version '[6.0.18,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 if (System.getenv('VERSION') != null) {
@@ -40,10 +41,16 @@ minecraft {
 
         client {
             property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+            arg "-mixin.config=tetracelium.mixins.json"
         }
 
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+            arg "-mixin.config=tetracelium.mixins.json"
             args '--nogui'
         }
 
@@ -65,23 +72,38 @@ repositories {
     maven {
         url = "https://maven.theillusivec4.top/"
     }
+    maven { url = 'https://maven.blamejared.com/' }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
     minecraft "net.neoforged:forge:${minecraft_version}-${forge_version}"
     implementation fg.deobf("se.mickelus.tetra:tetra:${tetra_version}")
     implementation fg.deobf("se.mickelus.mutil:mutil:${mutil_version}")
+
+//    compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}:api")
+//    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
+//    runtimeOnly fg.deobf("vazkii.botania:Botania:${botania_version}")
+//    compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}:api")
+
+    implementation fg.deobf("curse.maven:farmersdelight-398521:${farmersdelight_version}")
 }
 
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
-            minecraft_version   : minecraft_version, minecraft_version_range: minecraft_version_range,
-            forge_version       : forge_version, forge_version_range: forge_version_range,
-            mutil_version       : mutil_version, mutil_version_range: mutil_version_range,
-            tetra_version       : tetra_version, tetra_version_range: tetra_version_range,
-            loader_version_range: loader_version_range,
-            mod_id              : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
-            mod_authors         : mod_authors, mod_description: mod_description,
+            minecraft_version     : minecraft_version, minecraft_version_range: minecraft_version_range,
+            forge_version         : forge_version, forge_version_range: forge_version_range,
+            mutil_version         : mutil_version, mutil_version_range: mutil_version_range,
+            tetra_version         : tetra_version, tetra_version_range: tetra_version_range,
+            farmersdelight_version: farmersdelight_version, farmersdelight_version_range: farmersdelight_version_range,
+            loader_version_range  : loader_version_range,
+            mod_id                : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            mod_authors           : mod_authors, mod_description: mod_description,
     ]
     inputs.properties replaceProperties
 

@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cabbage"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "farmersdelight:cabbage_leaf"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "blade_cut"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "variants": [
+        {
+            "key": "storage/canvas",
+            "integrity": -3,
+            "aspects": {
+                "storage": 1
+            },
+            "effects": {
+                "storageSlot": 12
+            },
+            "glyph": {
+                "tint": "bda07f",
+                "textureX": 192
+            }
+        }
+    ]
+}

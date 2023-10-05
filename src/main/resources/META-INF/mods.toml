@@ -21,14 +21,14 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
-    modId="mutil"
+    modId="tetra"
     mandatory=true
-    versionRange="${mutil_version_range}"
+    versionRange="${tetra_version_range}"
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
-modId="tetra"
-mandatory=true
-versionRange="${tetra_version_range}"
-ordering="NONE"
-side="BOTH"
+    modId="farmersdelight"
+    mandatory=false
+    versionRange="${farmersdelight_version_range}"
+    ordering="NONE"
+    side="BOTH"

@@ -25,5 +25,4 @@ logs/
 
 src/generated/resources/.cache
 src/generated/resources/temp
-/worldgen_ref/
-/vanilla_worldgen/
+run-data/
