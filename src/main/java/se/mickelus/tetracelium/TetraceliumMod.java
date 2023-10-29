@@ -22,7 +22,7 @@ import java.util.concurrent.CompletableFuture;
 @Mod(TetraceliumMod.MOD_ID)
 @ParametersAreNonnullByDefault
 public class TetraceliumMod {
-    public static final String MOD_ID = "data/tetracelium";
+    public static final String MOD_ID = "tetracelium";
 
     public TetraceliumMod() {
         TetraceliumRegistries.init(FMLJavaModLoadingContext.get().getModEventBus());
