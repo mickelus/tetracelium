@@ -17,8 +17,8 @@
                 "breakable": 2
             },
             "attributes": {
-                "generic.attack_speed": -1,
-                "generic.attack_damage": -0.5,
+                "generic.attack_speed": -1.6,
+                "generic.attack_damage": -2.5,
                 "generic.attack_knockback": -0.1
             },
             "tools": {
