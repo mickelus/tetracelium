@@ -40,8 +40,11 @@ public class TetraceliumMod {
             FarmersDelightCompat.init();
         }
     }
+
+    @SubscribeEvent
+    public void setup(FMLCommonSetupEvent event) {
         if (ApotheosisCompat.isLoaded) {
-            ItemUpgradeRegistry.instance.registerReplacementHook(new AffixReplacementHook());
+            ApotheosisCompat.setup();
         }
     }
 
