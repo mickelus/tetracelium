@@ -36,6 +36,10 @@ public class TetraceliumMod {
             BotaniaCompat.init();
         }
 
+        if (FarmersDelightCompat.isLoaded) {
+            FarmersDelightCompat.init();
+        }
+    }
         if (ApotheosisCompat.isLoaded) {
             ItemUpgradeRegistry.instance.registerReplacementHook(new AffixReplacementHook());
         }
