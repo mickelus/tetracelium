@@ -19,7 +19,7 @@
         "default"
     ],
     "material": {
-        "tag": "minecraft:gems/certus_quartz"
+        "tag": "forge:gems/certus_quartz"
     },
     "requiredTools": {
         "hammer_dig": "minecraft:gold"
