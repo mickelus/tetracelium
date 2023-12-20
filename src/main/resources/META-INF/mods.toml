@@ -7,6 +7,7 @@ version="${mod_version}"
 displayName="${mod_name}"
 authors="${mod_authors}"
 description='''${mod_description}'''
+credits='''The twilight forest team'''
 
 [[dependencies.${mod_id}]]
     modId="forge"
@@ -24,7 +25,7 @@ description='''${mod_description}'''
     modId="tetra"
     mandatory=true
     versionRange="${tetra_version_range}"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 [[dependencies.${mod_id}]]
     modId="farmersdelight"
