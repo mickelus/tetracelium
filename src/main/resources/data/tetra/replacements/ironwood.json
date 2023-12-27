@@ -1,0 +1,63 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:ironwood_pickaxe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/basic_pickaxe_left", "basic_pickaxe/ironwood" ],
+            "double/head_right": [ "double/basic_pickaxe_right", "basic_pickaxe/ironwood" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        }
+    },
+    {
+        "predicate": {
+            "items": [ "twilightforest:ironwood_axe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/basic_axe_left", "basic_axe/ironwood" ],
+            "double/head_right": [ "double/butt_right", "butt/ironwood" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        }
+    },
+    {
+        "predicate": {
+            "items": [ "twilightforest:ironwood_hoe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/hoe_left", "hoe/ironwood" ],
+            "double/head_right": [ "double/butt_right", "butt/ironwood" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        }
+    },
+    {
+        "predicate": {
+            "items": [ "twilightforest:ironwood_shovel" ]
+        },
+        "item": "tetra:modular_single",
+        "modules": {
+            "single/head": [ "single/basic_shovel", "basic_shovel/ironwood" ],
+            "single/handle": [ "single/basic_handle", "basic_handle/stick" ]
+        }
+    },
+    {
+        "predicate": {
+            "items": [ "twilightforest:ironwood_sword" ]
+        },
+        "item": "tetra:modular_sword",
+        "modules": {
+            "sword/blade": [ "sword/basic_blade", "basic_blade/ironwood" ],
+            "sword/hilt": [ "sword/basic_hilt", "basic_hilt/stick" ],
+            "sword/pommel": [ "sword/decorative_pommel", "decorative_pommel/ironwood" ],
+            "sword/guard": [ "sword/makeshift_guard", "makeshift_guard/ironwood" ]
+        }
+    }
+]

@@ -1,0 +1,50 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "replace": true,
+    "key": "ironwood",
+    "category": "metal",
+    "primary": 5,
+    "secondary": 3.5,
+    "tertiary": 2.5,
+    "durability": 512,
+    "integrityCost": 2,
+    "integrityGain": 5,
+    "magicCapacity": 150,
+    "toolLevel": "minecraft:iron",
+    "toolEfficiency": 6.5,
+    "tints": {
+        "glyph": "829a5c",
+        "texture": "847875"
+    },
+    "textures": [
+        "ironwood",
+        "metal"
+    ],
+    "textureOverrides": [
+        "item/module/double/head/adze/",
+        "item/module/double/head/basic_axe/",
+        "item/module/double/head/basic_pickaxe/",
+        "item/module/double/head/butt/",
+        "item/module/double/head/claw/",
+        "item/module/double/head/hoe/",
+        "item/module/double/head/sickle/",
+        "item/module/single/head/basic_shovel/",
+        "item/module/sword/guard/makeshift_guard/",
+        "item/module/sword/pommel/decorative_pommel/",
+        "item/module/sword/blade/basic/",
+        "item/module/sword/blade/short/",
+        "item/module/sword/blade/heavy/"
+    ],
+    "material": {
+        "items": [ "twilightforest:ironwood_ingot" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "features": [ "rootboon" ]
+}

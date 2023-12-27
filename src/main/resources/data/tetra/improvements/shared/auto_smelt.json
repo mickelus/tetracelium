@@ -1,0 +1,8 @@
+[
+    {
+        "key": "auto_smelt",
+        "effects": {
+            "autoSmelt": 1
+        }
+    }
+]

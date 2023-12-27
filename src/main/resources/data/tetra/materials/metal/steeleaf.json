@@ -1,0 +1,47 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "replace": true,
+    "key": "steeleaf",
+    "category": "metal",
+    "primary": 6,
+    "secondary": 3,
+    "tertiary": 4.5,
+    "durability": 131,
+    "integrityCost": 2,
+    "integrityGain": 5,
+    "magicCapacity": 54,
+    "toolLevel": "minecraft:diamond",
+    "toolEfficiency": 8,
+    "tints": {
+        "glyph": "4a8539",
+        "texture": "74b262"
+    },
+    "textures": [
+        "steeleaf",
+        "shiny",
+        "metal"
+    ],
+    "textureOverrides": [
+        "item/module/double/head/adze/",
+        "item/module/double/head/basic_axe/",
+        "item/module/double/head/basic_pickaxe/",
+        "item/module/double/head/butt/",
+        "item/module/double/head/claw/",
+        "item/module/double/head/hoe/",
+        "item/module/double/head/sickle/",
+        "item/module/single/head/basic_shovel/",
+        "item/module/sword/guard/makeshift_guard/"
+    ],
+    "material": {
+        "items": [ "twilightforest:steeleaf_ingot" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "features": [ "leafboon" ]
+}

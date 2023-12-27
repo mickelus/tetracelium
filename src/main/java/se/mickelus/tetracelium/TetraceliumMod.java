@@ -16,6 +16,7 @@ import se.mickelus.tetracelium.compat.apotheosis.ApotheosisCompat;
 import se.mickelus.tetracelium.compat.botania.BotaniaCompat;
 import se.mickelus.tetracelium.compat.farmersdelight.FarmersDelightCompat;
 import se.mickelus.tetracelium.compat.farmersdelight.provider.FarmersDelightCuttingRecipeProvider;
+import se.mickelus.tetracelium.compat.twilightforest.TwilightForestCompat;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
@@ -39,6 +40,10 @@ public class TetraceliumMod {
         if (FarmersDelightCompat.isLoaded) {
             FarmersDelightCompat.init();
         }
+
+        if (TwilightForestCompat.isLoaded) {
+            TwilightForestCompat.init();
+        }
     }
 
     @SubscribeEvent
@@ -53,6 +58,10 @@ public class TetraceliumMod {
     public void clientSetup(FMLClientSetupEvent event) {
         if (BotaniaCompat.isLoaded) {
             BotaniaCompat.clientSetup();
+        }
+
+        if (TwilightForestCompat.isLoaded) {
+            TwilightForestCompat.clientInit();
         }
     }
 

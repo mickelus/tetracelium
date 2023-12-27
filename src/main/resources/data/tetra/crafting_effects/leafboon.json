@@ -1,0 +1,89 @@
+{
+    "replace": true,
+    "requirement": {
+        "type": "tetra:and",
+        "requirements": [
+            {
+                "type": "tetra:craft_type",
+                "craft": "module"
+            },
+            {
+                "type": "tetra:material",
+                "material": {
+                    "items": [ "twilightforest:steeleaf_ingot" ]
+                }
+            }
+        ]
+    },
+    "outcomes": [
+        {
+            "type": "tetra:apply_list",
+            "count": 1,
+            "effects": [
+                {
+                    "requirement": {
+                        "type": "tetra:and",
+                        "requirements": [
+                            {
+                                "type": "tetra:or",
+                                "requirements": [
+                                    {
+                                        "type": "tetra:aspect",
+                                        "aspect": "edgedWeapon"
+                                    },
+                                    {
+                                        "type": "tetra:aspect",
+                                        "aspect": "bluntWeapon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "tetra:aspect",
+                                "aspect": "blockBreaker"
+                            }
+                        ]
+                    },
+                    "outcome": {
+                        "type": "tetra:apply_enchantments",
+                        "enchantments": {
+                            "minecraft:efficiency": 2
+                        }
+                    }
+                },
+                {
+                    "requirement": {
+                        "type": "tetra:aspect",
+                        "aspect": "blockBreaker"
+                    },
+                    "outcome": {
+                        "type": "tetra:apply_enchantments",
+                        "enchantments": {
+                            "minecraft:fortune": 2
+                        }
+                    }
+                },
+                {
+                    "requirement": {
+                        "type": "tetra:or",
+                        "requirements": [
+                            {
+                                "type": "tetra:aspect",
+                                "aspect": "edgedWeapon"
+                            },
+                            {
+                                "type": "tetra:aspect",
+                                "aspect": "bluntWeapon"
+                            }
+                        ]
+                    },
+                    "outcome": {
+                        "type": "tetra:apply_enchantments",
+                        "enchantments": {
+                            "minecraft:looting": 2
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
