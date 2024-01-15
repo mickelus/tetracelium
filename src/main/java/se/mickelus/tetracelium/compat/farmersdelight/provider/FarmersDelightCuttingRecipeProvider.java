@@ -1,11 +1,16 @@
 package se.mickelus.tetracelium.compat.farmersdelight.provider;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import org.jetbrains.annotations.Nullable;
+import se.mickelus.tetracelium.TetraceliumMod;
 import se.mickelus.tetracelium.compat.farmersdelight.FarmersDelightToolActions;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.crafting.ingredient.ToolActionIngredient;
@@ -23,13 +28,16 @@ public class FarmersDelightCuttingRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        cuttingAnimalItems(consumer);
-        cuttingVegetables(consumer);
-        cuttingFoods(consumer);
-        cuttingFlowers(consumer);
+        Consumer<FinishedRecipe> consumerWrapper = recipe -> consumer.accept(new FinishedRecipeConditionWrapper(recipe));
+        cuttingAnimalItems(consumerWrapper);
+        cuttingVegetables(consumerWrapper);
+        cuttingFoods(consumerWrapper);
+        cuttingFlowers(consumerWrapper);
     }
 
+
     private static void cuttingAnimalItems(Consumer<FinishedRecipe> consumer) {
+
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.BEEF), new ToolActionIngredient(FarmersDelightToolActions.bladeCut), ModItems.MINCED_BEEF.get(), 2)
                 .build(consumer);
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(Items.PORKCHOP), new ToolActionIngredient(FarmersDelightToolActions.bladeCut), ModItems.BACON.get(), 2)
@@ -147,5 +155,49 @@ public class FarmersDelightCuttingRecipeProvider extends RecipeProvider {
                 .addResultWithChance(ModItems.TOMATO.get(), 0.2F)
                 .addResultWithChance(Items.GREEN_DYE, 0.1F)
                 .build(consumer);
+    }
+
+    static class FinishedRecipeConditionWrapper implements FinishedRecipe {
+        FinishedRecipe recipe;
+
+        public FinishedRecipeConditionWrapper(FinishedRecipe recipe) {
+            this.recipe = recipe;
+        }
+
+        @Override
+        public void serializeRecipeData(JsonObject json) {
+            recipe.serializeRecipeData(json);
+
+            JsonObject condition = new JsonObject();
+            condition.addProperty("type", "forge:mod_loaded");
+            condition.addProperty("modid", "farmersdelight");
+
+            JsonArray conditions = new JsonArray();
+            conditions.add(condition);
+
+            json.add("conditions", conditions);
+        }
+
+        @Override
+        public ResourceLocation getId() {
+            return new ResourceLocation(TetraceliumMod.MOD_ID, recipe.getId().getPath());
+        }
+
+        @Override
+        public RecipeSerializer<?> getType() {
+            return recipe.getType();
+        }
+
+        @Nullable
+        @Override
+        public JsonObject serializeAdvancement() {
+            return recipe.serializeAdvancement();
+        }
+
+        @Nullable
+        @Override
+        public ResourceLocation getAdvancementId() {
+            return recipe.getAdvancementId();
+        }
     }
 }
