@@ -13,7 +13,7 @@
             "materials": [ "tetra:stone/flint", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
             "key": "knife/",
             "aspects": {
-                "edgedWeapon": 2,
+                "edged_weapon": 2,
                 "breakable": 2
             },
             "attributes": {

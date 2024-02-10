@@ -1,0 +1,44 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "key": "knightmetal",
+    "category": "metal",
+    "primary": 6,
+    "secondary": 2.5,
+    "tertiary": 3.8,
+    "durability": 512,
+    "integrityCost": 2,
+    "integrityGain": 6,
+    "magicCapacity": 54,
+    "toolLevel": "minecraft:diamond",
+    "toolEfficiency": 8,
+    "tints": {
+        "glyph": "a3b391",
+        "texture": "c9d8b6"
+    },
+    "textures": [
+        "knightmetal",
+        "metal"
+    ],
+    "textureOverrides": [
+        "item/module/double/head/basic_axe/",
+        "item/module/double/head/basic_pickaxe/",
+        "item/module/double/head/butt/",
+        "item/module/double/head/butt/alternate_",
+        "item/module/sword/guard/makeshift_guard/",
+        "item/module/sword/blade/basic/",
+        "item/module/sword/blade/heavy/",
+        "item/module/shield/plate/tower/"
+    ],
+    "material": {
+        "items": [ "twilightforest:knightmetal_ingot" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:diamond"
+    },
+    "features": [ "darkwrought" ]
+}

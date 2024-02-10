@@ -30,7 +30,6 @@ public class IgnitingEffect {
         }
     }
 
-
     @OnlyIn(Dist.CLIENT)
     public static void clientInit() {
         IStatGetter statGetter = new StatGetterEffectLevel(ignitingEffect, 1);

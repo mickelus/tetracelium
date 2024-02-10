@@ -1,0 +1,36 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:gold_minotaur_axe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/minotaur_axe_left", "minotaur_axe/gold" ],
+            "double/head_right": [ "double/butt_right", "butt/minotaur_gold" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:diamond_minotaur_axe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/minotaur_axe_left", "minotaur_axe/diamond" ],
+            "double/head_right": [ "double/butt_right", "butt/minotaur_diamond" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        }
+    }
+]

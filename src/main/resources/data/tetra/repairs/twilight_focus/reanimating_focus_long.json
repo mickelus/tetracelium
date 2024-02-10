@@ -1,0 +1,15 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "items": [ "minecraft:potion" ],
+        "nbt": "{Potion:\"minecraft:long_strength\"}"
+    },
+    "experienceCost": 4,
+    "moduleKey": "sword/twilight_focus",
+    "moduleVariant": "twilight_focus/reanimating"
+}

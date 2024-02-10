@@ -15,7 +15,7 @@
             },
             {
                 "type": "tetra:aspect",
-                "aspect": "blockBreaker"
+                "aspect": "block_breaker"
             },
             {
                 "type": "tetra:not",

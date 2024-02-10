@@ -17,8 +17,8 @@
     "toolLevel": "minecraft:netherite",
     "toolEfficiency": 9,
     "tints": {
-        "glyph": "fa9f00",
-        "texture": "85e517"
+        "glyph": "fffa96",
+        "texture": "ffc53d"
     },
     "textures": [
         "fiery_ingot",

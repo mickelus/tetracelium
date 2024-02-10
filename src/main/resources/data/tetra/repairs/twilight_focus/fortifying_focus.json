@@ -1,0 +1,14 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "items": [ "minecraft:golden_apple" ]
+    },
+    "experienceCost": 4,
+    "moduleKey": "sword/twilight_focus",
+    "moduleVariant": "twilight_focus/fortifying"
+}

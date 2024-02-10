@@ -1,0 +1,18 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "items": [ "minecraft:phantom_membrane" ],
+        "count": 2
+    },
+    "requiredTools": {
+        "cut": "minecraft:iron"
+    },
+    "experienceCost": 4,
+    "moduleKey": "bow/ender_string",
+    "moduleVariant": "ender_string/ender_string"
+}

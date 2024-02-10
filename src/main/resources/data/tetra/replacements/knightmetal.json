@@ -1,0 +1,70 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:knightmetal_pickaxe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/basic_pickaxe_left", "basic_pickaxe/knightmetal" ],
+            "double/head_right": [ "double/butt_right", "butt/knightmetal" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        },
+        "improvements": {
+            "double/head_left:knightmetal_punishing": 0
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:knightmetal_axe" ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [ "double/basic_axe_left", "basic_axe/knightmetal" ],
+            "double/head_right": [ "double/butt_right", "butt/alternate_knightmetal" ],
+            "double/handle": [ "double/basic_handle", "basic_handle/stick" ]
+        },
+        "improvements": {
+            "double/head_left:knightmetal_skewering": 0
+        }
+    },
+    {
+        "predicate": {
+            "items": [ "twilightforest:knightmetal_sword" ]
+        },
+        "item": "tetra:modular_sword",
+        "modules": {
+            "sword/blade": [ "sword/basic_blade", "basic_blade/knightmetal" ],
+            "sword/hilt": [ "sword/basic_hilt", "basic_hilt/stick" ],
+            "sword/pommel": [ "sword/decorative_pommel", "decorative_pommel/knightmetal" ],
+            "sword/guard": [ "sword/makeshift_guard", "makeshift_guard/knightmetal" ]
+        },
+        "improvements": {
+            "sword/blade:knightmetal_punishing": 0
+        }
+    },
+    {
+        "predicate": {
+            "items": [ "twilightforest:knightmetal_shield" ]
+        },
+        "item": "tetra:modular_shield",
+        "modules": {
+            "shield/plate": [ "shield/tower", "tower/knightmetal" ],
+            "shield/grip": [ "shield/basic_grip", "basic_grip/iron" ]
+        },
+        "improvements": {
+            "shield/plate:shield/trim/iron": 0
+        }
+    }
+]

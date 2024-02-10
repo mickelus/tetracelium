@@ -1,0 +1,15 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "items": [ "minecraft:ender_eye" ],
+        "count": 2
+    },
+    "experienceCost": 4,
+    "moduleKey": "bow/seeker_stave",
+    "moduleVariant": "seeker_stave/seeker_stave"
+}

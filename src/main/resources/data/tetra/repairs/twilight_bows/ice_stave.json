@@ -1,0 +1,17 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "tag": "minecraft:ice"
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "experienceCost": 4,
+    "moduleKey": "bow/ice_stave",
+    "moduleVariant": "ice_stave/ice_stave"
+}

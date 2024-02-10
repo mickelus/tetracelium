@@ -19,7 +19,8 @@
             "double/head_left:auto_smelt": 0,
             "double/head_left:fiery_igniting": 0,
             "double/head_right:auto_smelt": 0,
-            "double/head_right:fiery_igniting": 0
+            "double/head_right:fiery_igniting": 0,
+            "double/handle:quenched": 1
         }
     },
     {
@@ -34,7 +35,8 @@
             "sword/guard": [ "sword/makeshift_guard", "makeshift_guard/fiery_ingot" ]
         },
         "improvements": {
-            "sword/blade:igniting": 0
+            "sword/blade:igniting": 0,
+            "sword/hilt:quenched": 1
         }
     }
 ]

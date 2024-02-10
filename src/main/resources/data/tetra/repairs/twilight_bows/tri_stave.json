@@ -1,0 +1,18 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "items": [ "twilightforest:time_planks" ],
+        "count": 2
+    },
+    "requiredTools": {
+        "axe_dig": "minecraft:diamond"
+    },
+    "experienceCost": 4,
+    "moduleKey": "bow/tri_stave",
+    "moduleVariant": "tri_stave/tri_stave"
+}

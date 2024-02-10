@@ -1,0 +1,15 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "material": {
+        "items": [ "minecraft:ender_pearl" ],
+        "count": 2
+    },
+    "experienceCost": 4,
+    "moduleKey": "bow/ender_stave",
+    "moduleVariant": "ender_stave/ender_stave"
+}

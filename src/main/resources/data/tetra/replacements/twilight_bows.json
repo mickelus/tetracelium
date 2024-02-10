@@ -1,0 +1,78 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:triple_bow" ]
+        },
+        "item": "tetra:modular_bow",
+        "modules": {
+            "bow/stave": [ "bow/tri_stave", "tri_stave/tri_stave" ],
+            "bow/string": [ "bow/tri_string", "tri_string/tri_string" ]
+        },
+        "improvements": {
+            "bow/stave:stave/wrap/tri_stave": 0
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:seeker_bow" ]
+        },
+        "item": "tetra:modular_bow",
+        "modules": {
+            "bow/stave": [ "bow/seeker_stave", "tri_stave/seeker_stave" ],
+            "bow/string": [ "bow/seeker_string", "tri_string/seeker_string" ]
+        },
+        "improvements": {
+            "bow/stave:stave/wrap/seeker_stave": 0
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:ice_bow" ]
+        },
+        "item": "tetra:modular_bow",
+        "modules": {
+            "bow/stave": [ "bow/ice_stave", "tri_stave/ice_stave" ],
+            "bow/string": [ "bow/ice_string", "tri_string/ice_string" ]
+        },
+        "improvements": {
+            "bow/stave:stave/wrap/ice_stave": 0
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "twilightforest"
+            }
+        ],
+        "predicate": {
+            "items": [ "twilightforest:ender_bow" ]
+        },
+        "item": "tetra:modular_bow",
+        "modules": {
+            "bow/stave": [ "bow/ender_stave", "tri_stave/ender_stave" ],
+            "bow/string": [ "bow/ender_string", "tri_string/ender_string" ]
+        },
+        "improvements": {
+            "bow/stave:stave/wrap/ender_stave": 0
+        }
+    }
+]

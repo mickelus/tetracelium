@@ -12,11 +12,16 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import se.mickelus.mutil.network.PacketHandler;
+import se.mickelus.mutil.scheduling.AbstractScheduler;
+import se.mickelus.mutil.scheduling.ServerScheduler;
 import se.mickelus.tetracelium.compat.apotheosis.ApotheosisCompat;
 import se.mickelus.tetracelium.compat.botania.BotaniaCompat;
 import se.mickelus.tetracelium.compat.farmersdelight.FarmersDelightCompat;
 import se.mickelus.tetracelium.compat.farmersdelight.provider.FarmersDelightCuttingRecipeProvider;
 import se.mickelus.tetracelium.compat.twilightforest.TwilightForestCompat;
+import se.mickelus.tetracelium.compat.twilightforest.effects.SapParticlePacket;
+import se.mickelus.tetracelium.compat.twilightforest.effects.TwilightBoltPacket;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
@@ -26,10 +31,13 @@ import java.util.concurrent.CompletableFuture;
 @ParametersAreNonnullByDefault
 public class TetraceliumMod {
     public static final String MOD_ID = "tetracelium";
+    public static PacketHandler packetHandler;
+    public static AbstractScheduler serverScheduler = new ServerScheduler();
 
     public TetraceliumMod() {
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(serverScheduler);
 
         TetraceliumRegistries.init(FMLJavaModLoadingContext.get().getModEventBus());
 
@@ -44,6 +52,8 @@ public class TetraceliumMod {
         if (TwilightForestCompat.isLoaded) {
             TwilightForestCompat.init();
         }
+
+        packetHandler = new PacketHandler("tetracelium", "main", "1");
     }
 
     @SubscribeEvent
@@ -51,6 +61,9 @@ public class TetraceliumMod {
         if (ApotheosisCompat.isLoaded) {
             ApotheosisCompat.setup();
         }
+
+        packetHandler.registerPacket(TwilightBoltPacket.class, TwilightBoltPacket::new);
+        packetHandler.registerPacket(SapParticlePacket.class, SapParticlePacket::new);
     }
 
     @SubscribeEvent
