@@ -1,5 +1,11 @@
 {
     "replace": true,
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
     "requirement": {
         "type": "tetra:and",
         "requirements": [
