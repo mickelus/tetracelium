@@ -1,6 +1,7 @@
 package se.mickelus.tetracelium.compat.botania;
 
 import com.google.common.collect.Streams;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -20,6 +21,7 @@ import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
 import se.mickelus.tetra.gui.stats.getter.TooltipGetterInteger;
 import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
+import vazkii.botania.api.mana.ManaItemHandler;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -58,7 +60,7 @@ public class ManaRepair {
             int repairAmount = requestManaForDurability(player, itemStack, damage, durabilityPerMana);
             if (repairAmount > 0) {
                 itemStack.setDamageValue(damage - repairAmount);
-//                    player.getInventory().setChanged();
+                    player.getInventory().setChanged();
             }
         }
     }
@@ -78,7 +80,7 @@ public class ManaRepair {
     }
 
     private static int requestManaForDurability(Player player, ItemStack itemStack, int damage, float durabilityPerMana) {
-        int grantedMana = 0; //ManaItemHandler.instance().requestManaForTool(itemStack, player, Mth.ceil(damage / durabilityPerMana), true);
+        int grantedMana = ManaItemHandler.instance().requestManaForTool(itemStack, player, Mth.ceil(damage / durabilityPerMana), true);
         return Math.min((int) (durabilityPerMana * grantedMana), damage);
     }
 }
