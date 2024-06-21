@@ -23,6 +23,7 @@ import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 import vazkii.botania.api.mana.ManaItemHandler;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
@@ -70,7 +71,7 @@ public class ManaRepair {
         event.setAmount(reduceDurabilityDamage(event.getUsingEntity(), event.getItemStack(), event.getAmount()));
     }
 
-    public static int reduceDurabilityDamage(Entity entity, ItemStack itemStack, int amount) {
+    public static int reduceDurabilityDamage(@Nullable Entity entity, ItemStack itemStack, int amount) {
         float durabilityPerMana = EffectHelper.getEffectEfficiency(itemStack, effect);
         if (durabilityPerMana > 0 && entity instanceof Player player) {
             int result = requestManaForDurability(player, itemStack, amount, durabilityPerMana);
