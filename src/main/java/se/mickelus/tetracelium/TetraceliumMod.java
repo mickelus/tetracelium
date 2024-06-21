@@ -19,6 +19,7 @@ import se.mickelus.tetracelium.compat.apotheosis.ApotheosisCompat;
 import se.mickelus.tetracelium.compat.botania.BotaniaCompat;
 import se.mickelus.tetracelium.compat.farmersdelight.FarmersDelightCompat;
 import se.mickelus.tetracelium.compat.farmersdelight.provider.FarmersDelightCuttingRecipeProvider;
+import se.mickelus.tetracelium.compat.soul_fire_d.SoulFiredCompat;
 import se.mickelus.tetracelium.compat.twilightforest.TwilightForestCompat;
 import se.mickelus.tetracelium.compat.twilightforest.effects.SapParticlePacket;
 import se.mickelus.tetracelium.compat.twilightforest.effects.TwilightBoltPacket;
@@ -51,6 +52,10 @@ public class TetraceliumMod {
 
         if (TwilightForestCompat.isLoaded) {
             TwilightForestCompat.init();
+        }
+
+        if (SoulFiredCompat.isLoaded) {
+            SoulFiredCompat.init();
         }
 
         packetHandler = new PacketHandler("tetracelium", "main", "1");

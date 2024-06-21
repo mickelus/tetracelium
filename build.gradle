@@ -89,6 +89,14 @@ repositories {
     maven {
         url = "https://maven.ellpeck.de"
     }
+    maven {
+        name = "Crystal Nest"
+        url = "https://maven.crystalnest.it"
+    }
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
 }
 
 dependencies {
@@ -115,6 +123,9 @@ dependencies {
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+    implementation fg.deobf("it.crystalnest:cobweb-forge:${minecraft_version}-${cobweb_version}")
+    implementation fg.deobf("it.crystalnest:soul-fire-d-forge:${minecraft_version}-${soul_fire_d_version}")
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -125,6 +136,7 @@ tasks.named('processResources', ProcessResources).configure {
             tetra_version         : tetra_version, tetra_version_range: tetra_version_range,
             farmersdelight_version: farmersdelight_version, farmersdelight_version_range: farmersdelight_version_range,
             naturesaura_version   : naturesaura_version, naturesaura_version_range: naturesaura_version_range,
+            soul_fire_d_version: soul_fire_d_version, soul_fire_d_version_range: soul_fire_d_version_range,
             loader_version_range  : loader_version_range,
             mod_id                : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors           : mod_authors, mod_description: mod_description,
