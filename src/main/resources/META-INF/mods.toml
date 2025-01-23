@@ -34,8 +34,8 @@ credits='''The twilight forest team'''
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
-modId="soul_fire_d"
-mandatory=false
-versionRange="${soul_fire_d_version_range}"
-ordering="NONE"
-side="BOTH"
+    modId="soul_fire_d"
+    mandatory=false
+    versionRange="${soul_fire_d_version_range}"
+    ordering="NONE"
+    side="BOTH"

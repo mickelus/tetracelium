@@ -1,12 +1,12 @@
 name: 🐛 Bug Report
 description: Something is not working as expected
 title: "[Bug] "
-labels: [bug]
+labels: [ bug ]
 body:
   - type: markdown
     attributes:
       value: |
-        Please try the latest version of tetra and check if the issue persist before submitting a report, thanks you for putting effort into your bug reports.
+        Please try the latest version of tetracelium (and tetra) and check if the issue persist before submitting a report, thanks you for putting effort into your bug reports.
   - type: textarea
     id: observed
     attributes:
@@ -40,10 +40,17 @@ body:
       description: If this was a crash, grab [minecraft instance]/logs/debug.log, upload it as a [gist](https://gist.github.com/) and paste the link here
       placeholder: https://gist.github.com/mickelus/e23d75f
   - type: input
+    id: tetracelium-version
+    attributes:
+      label: Tetracelium version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
     id: tetra-version
     attributes:
       label: Tetra version
-      placeholder: 3.0.0
+      placeholder: 5.0.0
     validations:
       required: true
   - type: input
@@ -64,4 +71,4 @@ body:
     id: other-mods
     attributes:
       label: Other mods
-      description: List any other mods present when the bug was encountered, include the mod versions
+      description: List any other mods present when the bug was encountered, include the mod versions. This should be a minimal set of mods required to reproduce the issue, referencing a full modpack will likely result in this issue being closed without consideration.

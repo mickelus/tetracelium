@@ -1,0 +1,24 @@
+name: 💡 Compat request
+description: Request tetra compatibility for mod
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Mod description
+      description: A short description of the mod
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Content
+      description: Which content from the mod should tetra support, in detail. For materials, include sword damage, axe damage, mining efficiency, mining tier, durability, enchantability and special effects. For full items, include crafting recipe (or means of acquisition), item id, damage, (mining efficiency and tier if applicable), durability, enchantability and special effects.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why should compatability be added for this mod
+    validations:
+      required: true
