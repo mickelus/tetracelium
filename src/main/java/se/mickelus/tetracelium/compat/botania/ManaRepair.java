@@ -81,7 +81,12 @@ public class ManaRepair {
     }
 
     private static int requestManaForDurability(Player player, ItemStack itemStack, int damage, float durabilityPerMana) {
-        int grantedMana = ManaItemHandler.instance().requestManaForTool(itemStack, player, Mth.ceil(damage / durabilityPerMana), true);
-        return Math.min((int) (durabilityPerMana * grantedMana), damage);
+        // Get and apply discount to mana needed per durability
+        float manaPerDurability = 1 / durabilityPerMana;
+        float manaMult = Math.max(0F, 1F - ManaItemHandler.instance().getFullDiscountForTools(player, itemStack));
+        int discountedManaPerDurability = (int) (manaPerDurability * manaMult);
+        // End Discount
+        int grantedMana = ManaItemHandler.instance().requestMana(itemStack, player, damage * discountedManaPerDurability, true);
+        return Math.min(grantedMana / discountedManaPerDurability, damage);
     }
 }
