@@ -69,6 +69,14 @@ minecraft {
     }
 }
 
+mixin {
+    add sourceSets.main, "tetracelium.refmap.json"
+    config "tetracelium.mixins.json"
+
+    debug.verbose = true
+    debug.export = true
+}
+
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
@@ -126,6 +134,8 @@ dependencies {
 
     implementation fg.deobf("it.crystalnest:cobweb-forge:${minecraft_version}-${cobweb_version}")
     implementation fg.deobf("it.crystalnest:soul-fire-d-forge:${minecraft_version}-${soul_fire_d_version}")
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -136,7 +146,7 @@ tasks.named('processResources', ProcessResources).configure {
             tetra_version         : tetra_version, tetra_version_range: tetra_version_range,
             farmersdelight_version: farmersdelight_version, farmersdelight_version_range: farmersdelight_version_range,
             naturesaura_version   : naturesaura_version, naturesaura_version_range: naturesaura_version_range,
-            soul_fire_d_version: soul_fire_d_version, soul_fire_d_version_range: soul_fire_d_version_range,
+            soul_fire_d_version   : soul_fire_d_version, soul_fire_d_version_range: soul_fire_d_version_range,
             loader_version_range  : loader_version_range,
             mod_id                : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors           : mod_authors, mod_description: mod_description,
