@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: 💡 Feature request
+    url: https://github.com/mickelus/tetracelium/discussions/new?category=compat-discussions
+    about: Start off a compat request in the discussions section
   - name: 💬 Mickelus' discord
     url: https://discord.gg/MyjK4Fx
     about: Ask for help or chat about tetra with others over on discord

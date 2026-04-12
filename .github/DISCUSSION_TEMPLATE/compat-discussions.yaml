@@ -1,0 +1,99 @@
+title: "<Mod Name> compatability"
+labels: [ "compat-discussions" ]
+body:
+  - type: textarea
+    id: mod_description
+    attributes:
+      label: Mod description
+      description: Briefly describe the mod you want to see supported
+    validations:
+      required: true
+
+  - type: input
+    id: mod_name
+    attributes:
+      label: Mod Name
+    validations:
+      required: true
+
+  - type: input
+    id: mod_link
+    attributes:
+      label: CurseForge or Modrinth link
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: compat_overview
+    attributes:
+      label: Compat overview
+      description: Provide a short overview of which parts of this mod that should be made compatible with tetra. What items or materials from the mod do you want to see supported? What modules or features of Tetra do you want to see them integrated with?
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## Material Proposals
+
+        Fill in one row per material. Leave cells blank if you're unsure — stats can be
+        discussed and refined in the comments before this becomes an issue.
+
+        For determining the properties I've used:
+        - sword/pickaxe durability to determine durability
+        - enchantability multiplied by 6 for magic capacity (multiplier fit well with cost of enchantments)
+        - vanilla harvest level values +1 for tool levels (note that tool level is subtracted by 1 before passed back to vanilla as harvest level)
+        - vanilla harvest efficiency for tool efficiency
+        - sword damage -1 for the primary multiplier
+        - roughly change secondary multiplier based on axe damage
+
+  - type: textarea
+    id: materials
+    attributes:
+      label: Materials
+      value: |
+        | Material name | Durability | Efficiency | Harvest tier | Hardness | Density | Flexibility | Tint color | Glyph color |
+        |---|---|---|---|---|---|---|---|---|---|
+        |  |  |  |  |  |  |  |  |  |  |
+        |  |  |  |  |  |  |  |  |  |  |
+        |  |  |  |  |  |  |  |  |  |  |
+    validations:
+      required: false
+
+  - type: textarea
+    id: material_effects
+    attributes:
+      label: Material effects
+      description: Do any of the materials have any special effects? E.g. innate enchantments, specific modules have bonus effects, should the item gain some ability or effect when used?
+    validations:
+      required: false
+
+  - type: textarea
+    id: items
+    attributes:
+      label: Modifiable items
+      description: Does the mod add any items that should be modifiable in the Tetra workbench? E.g. tools or weapons. Does the item fit into an existing module type or would it require a new module type?
+    validations:
+      required: false
+
+  - type: textarea
+    id: other_compat
+    attributes:
+      label: Other compat features
+      description: Are there other parts of the mod that should be compatible with Tetra?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched discussions for an existing request for this mod
+          required: true
+        - label: The mod is licensed under MIT or a similar permissive license
+          required: false
+        - label: I've checked with the mod author(s) and they're cool with this
+          required: false
