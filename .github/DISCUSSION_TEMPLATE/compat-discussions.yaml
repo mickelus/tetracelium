@@ -55,7 +55,7 @@ body:
       label: Materials
       value: |
         | Material name | Durability | Efficiency | Harvest tier | Hardness | Density | Flexibility | Tint color | Glyph color |
-        |---|---|---|---|---|---|---|---|---|---|
+        |---|---|---|---|---|---|---|---|---|
         |  |  |  |  |  |  |  |  |  |  |
         |  |  |  |  |  |  |  |  |  |  |
         |  |  |  |  |  |  |  |  |  |  |
